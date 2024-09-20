@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .son {
+            height: 100px;
+            width: 100px;
+            background-color: hotpink;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="son" id="box"></div>
+    <label>Height</label><input type="range" min="0" max="500" id="height" onchange="Height()"><br>
+    <label>Width</label><input type="range" min="0" max="500" id="width" onchange="Width()"><br>
+    <label>Radius</label><input type="range" id="range" min="0" max="50" onchange="Select_Radius()"><br>
+    <label>Color</label><input type="color" id="color" onchange="Select_Color()"><br>
+    <input type="number" placeholder="Height"><br>
+    <input type="number" placeholder="Width"><br>
+    <input type="submit" value="ok">
+    <script>
+        function Height() {
+            var c = document.getElementById("height").value;
+            var a = document.getElementById("box");
+            a.style.height = c + "px";
+        }
+
+        function Width() {
+            var c = document.getElementById("width").value;
+            var a = document.getElementById("box");
+            a.style.width = c + "px";
+        }
+
+        function Select_Color() {
+            var c = document.getElementById("color").value;
+            var a = document.getElementById("box");
+            a.style.backgroundColor = c;
+        }
+
+        function Select_Radius() {
+            var c = document.getElementById("range").value;
+            var a = document.getElementById("box");
+            a.style.borderRadius = c + "%";
+        }
+    </script>
+</body>
+
+</html>
